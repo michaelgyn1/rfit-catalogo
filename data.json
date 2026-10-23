@@ -1,0 +1,514 @@
+{
+ "v": 1,
+ "settings": {
+  "storeName": "R.FIT",
+  "tagline": "Moda Fitness",
+  "notice": "Disciplina · Foco · Evolução",
+  "whatsapp": "",
+  "instagram": ""
+ },
+ "products": [
+  {
+   "id": "t4nf2s9",
+   "name": "Conjunto Ana",
+   "category": "Conjunto shirts com bolso",
+   "price": 80,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Preto e lavanda",
+     "h": "#9a7b6f"
+    }
+   ],
+   "photos": [
+    "phsoyvk4y",
+    "phx9u00g5"
+   ],
+   "isNew": true,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p00",
+   "name": "Conjunto Short Alça Cruzada",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "Top com alças cruzadas no colo e short de cintura alta.",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Azul Petróleo",
+     "h": "#1C93A6"
+    },
+    {
+     "n": "Lilás",
+     "h": "#8E6A93"
+    },
+    {
+     "n": "Azul Royal",
+     "h": "#23409A"
+    }
+   ],
+   "photos": [
+    "f-a-1",
+    "f-a-2",
+    "f-b-4"
+   ],
+   "isNew": true,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p01",
+   "name": "Conjunto Short Telinha",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "Top de alças largas e short em tecido telinha com forro.",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Fendi",
+     "h": "#A08A78"
+    }
+   ],
+   "photos": [
+    "f-a-3"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p02",
+   "name": "Conjunto Legging Decote Reto",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "Cropped de decote reto com legging cintura alta.",
+   "sizes": [
+    "P",
+    "M",
+    "G",
+    "GG"
+   ],
+   "colors": [
+    {
+     "n": "Marsala",
+     "h": "#7A1D3A"
+    },
+    {
+     "n": "Verde Esmeralda",
+     "h": "#137A6A"
+    }
+   ],
+   "photos": [
+    "f-c-09",
+    "f-a-5",
+    "f-a-4"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p03",
+   "name": "Conjunto Legging Faixa Lateral",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "Legging com faixa lateral contrastante e top com barra.",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Marinho com Off",
+     "h": "#1E2A5C"
+    },
+    {
+     "n": "Vinho com Rosa",
+     "h": "#4A1626"
+    }
+   ],
+   "photos": [
+    "f-b-5",
+    "f-b-6"
+   ],
+   "isNew": true,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p04",
+   "name": "Conjunto Legging Royal",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Azul Royal",
+     "h": "#2335B0"
+    }
+   ],
+   "photos": [
+    "f-b-8",
+    "f-b-7"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p05",
+   "name": "Conjunto Legging Alcinha",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "Top de alcinhas com logo R.FIT e legging cintura alta.",
+   "sizes": [
+    "P",
+    "M",
+    "G",
+    "GG"
+   ],
+   "colors": [
+    {
+     "n": "Preto",
+     "h": "#1A1A1A"
+    },
+    {
+     "n": "Pistache",
+     "h": "#C6D57A"
+    }
+   ],
+   "photos": [
+    "f-c-02",
+    "f-c-03",
+    "f-c-06"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p06",
+   "name": "Conjunto Short Alcinha",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G",
+    "GG"
+   ],
+   "colors": [
+    {
+     "n": "Preto",
+     "h": "#1A1A1A"
+    },
+    {
+     "n": "Pistache",
+     "h": "#D8DE8E"
+    }
+   ],
+   "photos": [
+    "f-c-05",
+    "f-c-04"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p07",
+   "name": "Conjunto Legging Chocolate",
+   "category": "Conjuntos",
+   "price": null,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Chocolate",
+     "h": "#5E3B2E"
+    }
+   ],
+   "photos": [
+    "f-c-10",
+    "f-c-11",
+    "f-c-12"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p08",
+   "name": "Conjunto Corrida Short Saia",
+   "category": "Corrida",
+   "price": null,
+   "promo": null,
+   "desc": "Top e short saia para corrida.",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Roxo",
+     "h": "#4A2FB0"
+    }
+   ],
+   "photos": [
+    "f-b-3"
+   ],
+   "isNew": true,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p09",
+   "name": "Short Corrida com Bolso",
+   "category": "Corrida",
+   "price": null,
+   "promo": null,
+   "desc": "Cós franzido, bolso com zíper e friso refletivo.",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Rosa",
+     "h": "#F2A7B4"
+    },
+    {
+     "n": "Branco",
+     "h": "#F4F2EE"
+    },
+    {
+     "n": "Preto",
+     "h": "#1A1A1A"
+    }
+   ],
+   "photos": [
+    "f-b-1",
+    "f-b-2"
+   ],
+   "isNew": true,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p10",
+   "name": "Macaquinho R.FIT",
+   "category": "Macaquinhos",
+   "price": null,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Preto",
+     "h": "#1A1A1A"
+    },
+    {
+     "n": "Marinho",
+     "h": "#1F2C6B"
+    },
+    {
+     "n": "Uva",
+     "h": "#7A2E6E"
+    }
+   ],
+   "photos": [
+    "f-c-08",
+    "f-c-07"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p11",
+   "name": "Top Frente Única",
+   "category": "Tops",
+   "price": null,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Amarelo",
+     "h": "#EDDC79"
+    },
+    {
+     "n": "Branco",
+     "h": "#F7F5F0"
+    },
+    {
+     "n": "Vermelho",
+     "h": "#A3121F"
+    }
+   ],
+   "photos": [
+    "f-a-7",
+    "f-a-8"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p12",
+   "name": "Camiseta Dry R.FIT",
+   "category": "Camisetas",
+   "price": null,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G",
+    "GG"
+   ],
+   "colors": [
+    {
+     "n": "Preto",
+     "h": "#1A1A1A"
+    },
+    {
+     "n": "Verde Militar",
+     "h": "#6B7A45"
+    },
+    {
+     "n": "Rosa",
+     "h": "#F3B4C6"
+    },
+    {
+     "n": "Off White",
+     "h": "#F3EEDF"
+    }
+   ],
+   "photos": [
+    "f-a-9"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  },
+  {
+   "id": "p13",
+   "name": "Camiseta Tule",
+   "category": "Camisetas",
+   "price": null,
+   "promo": null,
+   "desc": "",
+   "sizes": [
+    "P",
+    "M",
+    "G"
+   ],
+   "colors": [
+    {
+     "n": "Laranja",
+     "h": "#F07A3A"
+    },
+    {
+     "n": "Caramelo",
+     "h": "#D0822E"
+    },
+    {
+     "n": "Off White",
+     "h": "#EFE6CF"
+    },
+    {
+     "n": "Marsala",
+     "h": "#6E1B25"
+    },
+    {
+     "n": "Preto",
+     "h": "#1A1A1A"
+    }
+   ],
+   "photos": [
+    "f-a-6"
+   ],
+   "isNew": false,
+   "soldOut": false,
+   "hidden": false
+  }
+ ],
+ "photos": {
+  "f-a-1": "img/f-a-1.jpg",
+  "f-a-2": "img/f-a-2.jpg",
+  "f-b-4": "img/f-b-4.jpg",
+  "f-a-3": "img/f-a-3.jpg",
+  "f-c-09": "img/f-c-09.jpg",
+  "f-a-5": "img/f-a-5.jpg",
+  "f-a-4": "img/f-a-4.jpg",
+  "f-b-5": "img/f-b-5.jpg",
+  "f-b-6": "img/f-b-6.jpg",
+  "f-b-8": "img/f-b-8.jpg",
+  "f-b-7": "img/f-b-7.jpg",
+  "f-c-02": "img/f-c-02.jpg",
+  "f-c-03": "img/f-c-03.jpg",
+  "f-c-06": "img/f-c-06.jpg",
+  "f-c-05": "img/f-c-05.jpg",
+  "f-c-04": "img/f-c-04.jpg",
+  "f-c-10": "img/f-c-10.jpg",
+  "f-c-11": "img/f-c-11.jpg",
+  "f-c-12": "img/f-c-12.jpg",
+  "f-b-3": "img/f-b-3.jpg",
+  "f-b-1": "img/f-b-1.jpg",
+  "f-b-2": "img/f-b-2.jpg",
+  "f-c-08": "img/f-c-08.jpg",
+  "f-c-07": "img/f-c-07.jpg",
+  "f-a-7": "img/f-a-7.jpg",
+  "f-a-8": "img/f-a-8.jpg",
+  "f-a-9": "img/f-a-9.jpg",
+  "f-a-6": "img/f-a-6.jpg",
+  "phsoyvk4y": "img/phsoyvk4y.jpg",
+  "phx9u00g5": "img/phx9u00g5.jpg"
+ }
+}
