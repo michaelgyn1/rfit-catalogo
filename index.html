@@ -306,7 +306,7 @@ function renderSheet(){
   else if(t==="edit") html=editHtml(ui.sheet);
   else if(t==="settings") html=settingsHtml(ui.sheet);
   else if(t==="login") html=loginHtml(ui.sheet);
-  else if(t==="ios") html=iosHtml();
+  else if(t==="ios") html=stepsHtml();
   sheetEl.innerHTML=html;
   document.body.appendChild(sheetEl);
   var car=sheetEl.querySelector(".car");
@@ -650,9 +650,22 @@ render();
 var deferredPrompt=null;
 function standalone(){try{return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true}catch(e){return false}}
 function isIOS(){return /iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1)}
-function canInstall(){return !standalone() && (deferredPrompt || isIOS())}
+function isMobile(){return /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent)||isIOS()}
+function inApp(){return /FBAN|FBAV|Instagram|WhatsApp|Line\/|wv\)/i.test(navigator.userAgent)}
+function canInstall(){return !standalone() && (deferredPrompt || isMobile())}
 window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferredPrompt=e;render()});
 window.addEventListener("appinstalled",function(){deferredPrompt=null;render();toast("App R.FIT instalado!")});
+function stepsHtml(){
+  var P=function(t){return '<p class="hint" style="font-size:15px;color:var(--ink)">'+t+'</p>'};
+  var head='<div class="sheet narrow" role="dialog" aria-label="Instalar app"><div class="shead"><h2>Instalar o app R.FIT</h2><button class="x" data-a="close" aria-label="Fechar">×</button></div><div class="sbody">';
+  if(inApp()) return head+P('Você abriu o link dentro de outro aplicativo (WhatsApp, Instagram…). Daqui não dá para instalar.')+
+    P('Toque nos <b>três pontinhos</b> (⋮ ou ⋯) no canto da tela e escolha <b>Abrir no navegador</b>'+(isIOS()?' / <b>Abrir no Safari</b>':' / <b>Abrir no Chrome</b>')+'. Depois toque em <b>Instalar app</b> de novo.')+'</div></div>';
+  if(!isIOS()) return head+P('1. Toque nos <b>três pontinhos ⋮</b> no canto de cima do Chrome.')+
+    P('2. Toque em <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>.')+
+    P('3. Confirme em <b>Instalar</b>. O ícone da R.FIT aparece na sua tela.')+
+    '<p class="hint">No navegador da Samsung, o menu fica embaixo (☰) e a opção se chama <b>Adicionar página a</b> → <b>Tela inicial</b>.</p></div></div>';
+  return iosHtml();
+}
 function iosHtml(){
   return '<div class="sheet narrow" role="dialog" aria-label="Instalar app"><div class="shead"><h2>Instalar o app R.FIT</h2><button class="x" data-a="close" aria-label="Fechar">×</button></div><div class="sbody">'+
   '<p class="hint" style="font-size:15px;color:var(--ink)">1. Toque no botão <b>Compartilhar</b> do Safari (o quadrado com a seta para cima).</p>'+
