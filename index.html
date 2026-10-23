@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#F5ECE9">
+<link rel="icon" type="image/png" href="icons/favicon.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="R.FIT">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:image" content="icons/icon-512.png">
 <meta property="og:title" content="R.FIT · Moda Fitness">
 <meta property="og:description" content="Veja as peças da R.FIT e faça seu pedido pelo WhatsApp">
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
@@ -247,6 +256,7 @@ function render(){
   h+='<nav class="rail" aria-label="Categorias"><div class="wrap">';
   ["Todos"].concat(cs).forEach(function(c){h+='<button class="chipbtn" data-a="cat" data-v="'+esc(c)+'" aria-pressed="'+(ui.cat===c)+'">'+esc(c)+'</button>'});
   h+='<input class="search" id="q" type="search" placeholder="Buscar peça ou cor" value="'+esc(ui.q)+'" aria-label="Buscar">';
+  if(canInstall()) h+='<button class="chipbtn pdfbtn" data-a="install">Instalar app</button>';
   if(loaded&&STATE.products.length) h+='<button class="chipbtn pdfbtn" data-a="pdf">↓ PDF '+(ui.cat==="Todos"?'do catálogo':'de '+esc(ui.cat))+'</button>';
   h+='</div></nav>';
   h+='<main class="wrap">';
@@ -296,6 +306,7 @@ function renderSheet(){
   else if(t==="edit") html=editHtml(ui.sheet);
   else if(t==="settings") html=settingsHtml(ui.sheet);
   else if(t==="login") html=loginHtml(ui.sheet);
+  else if(t==="ios") html=iosHtml();
   sheetEl.innerHTML=html;
   document.body.appendChild(sheetEl);
   var car=sheetEl.querySelector(".car");
@@ -636,6 +647,26 @@ document.addEventListener("click",function(e){
   if(a==="logout") logout();
 });
 render();
+var deferredPrompt=null;
+function standalone(){try{return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true}catch(e){return false}}
+function isIOS(){return /iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1)}
+function canInstall(){return !standalone() && (deferredPrompt || isIOS())}
+window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferredPrompt=e;render()});
+window.addEventListener("appinstalled",function(){deferredPrompt=null;render();toast("App R.FIT instalado!")});
+function iosHtml(){
+  return '<div class="sheet narrow" role="dialog" aria-label="Instalar app"><div class="shead"><h2>Instalar o app R.FIT</h2><button class="x" data-a="close" aria-label="Fechar">×</button></div><div class="sbody">'+
+  '<p class="hint" style="font-size:15px;color:var(--ink)">1. Toque no botão <b>Compartilhar</b> do Safari (o quadrado com a seta para cima).</p>'+
+  '<p class="hint" style="font-size:15px;color:var(--ink)">2. Role e toque em <b>Adicionar à Tela de Início</b>.</p>'+
+  '<p class="hint" style="font-size:15px;color:var(--ink)">3. Toque em <b>Adicionar</b>. O ícone da R.FIT aparece na sua tela.</p>'+
+  '<p class="hint">Se você abriu este link pelo WhatsApp ou Instagram, primeiro toque em ⋯ e escolha <b>Abrir no Safari</b>.</p>'+
+  '</div></div>';
+}
+document.addEventListener("click",function(e){
+  var b=e.target.closest('[data-a="install"]'); if(!b) return;
+  if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(function(){deferredPrompt=null;render()})}
+  else {ui.sheet={type:"ios"};renderSheet()}
+});
+if("serviceWorker" in navigator) window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});
 function askLogin(){ if(location.hash==="#admin" && !token){ui.sheet={type:"login"};renderSheet()} }
 window.addEventListener("hashchange",askLogin);
 boot().then(askLogin);
